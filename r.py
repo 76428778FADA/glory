@@ -5,8 +5,29 @@ import sys
 import argparse
 import time
 from random import randint
+contact = '''
+                  ________                                             
+   _jgN########Ngg_                                         
+ _N##N@@""  ""9NN##Np_                                      
+d###P            N####p    U can Find us in       
+"^^"              T####    "fb.me/AlgerianSoldiers"
+                  d###P    better call saul 
+               _g###@F                 
+            _gN##@P                                         
+          gN###F"                                           
+         d###F             JUST THINK: WHEN THE EXECUTION   
+        0###F              ORDERS ARE GIVEN, THEY'VE ALREADY
+        0###F              SIGNED THE ROLL CALL             
+        0###F                                               
+        "NN@'                                                
+                                                            
+         ___                                                
+   DH   q###r                                               
+         ""                                                
+'''
+example ='''
 
-example ='''-u & --url          | put the loggin url               |  ex:"example.com/login" 
+-u & --url          | put the loggin url               |  ex:"example.com/login" 
 -uI & --usernameId  | put the html username id         |  ex:"user"
 -us & --username    | put the username of the victim   |  ex:"user_01"
 -pI & --passwordId  | put thhtml password id           |  ex:"pass"
@@ -60,7 +81,8 @@ if login is None :
 
 password = open(password, 'r') 
 password = password.readlines()
-print 'numbers of passwords to try : %s ' % len(password) # create an empty list to store the lines in the file
+print contact
+print '[+] passwords to try : %s ' % len(password) # create an empty list to store the lines in the file
 
  # print out the 1st and last word of each line
 
@@ -78,7 +100,8 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 # User Agent
 useragents = ('Mozilla/5.0 (BeOS; U; BeOS BeBox; fr; rv:1.9) Gecko/2008052906 BonEcho/2.0' ,)
 
-print "attacking the user : {}" .format(user)
+
+print "[+] attacking: {}" .format(user)
 
 # Add User Agent In Header
 
